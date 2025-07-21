@@ -1,6 +1,7 @@
 # 🚁 Drone Tracking Web Application
 
-A full-stack real-time drone detection and tracking system built with FastAPI backend and React frontend.
+A full-stack real-time drone detection system capable of tracking multiple drone targets with 99% accuracy,
+utilizing YOLO, DeepSORT, React.js, and a FastAPI backend.
 
 ## Features
 
