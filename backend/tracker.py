@@ -30,20 +30,21 @@ logger = logging.getLogger(__name__)
 class DroneTracker:
     def __init__(self, model_path: str, confidence_threshold: float = 0.5):
         # Initialize YOLO model
-        self.device = 'cpu' #self._detect_device()
+        self.device = self._detect_device()
         self.model = YOLO(model_path)
         self.model.to(self.device)
         self.confidence_threshold = confidence_threshold
         
         # Initialize DeepSORT tracker
         self.tracker = DeepSort(
-            max_age=10,        # Keep tracks for 50 frames without detection          # Require 3 consecutive detections to confirm track
-            embedder="mobilenet",
-            max_cosine_distance=0.4,  # Increase distance threshold
+            max_age=40,
+            n_init=5,
+            embedder='mobilenet', 
+            embedder_gpu=True,        # Keep tracks for 50 frames without detection          # Require 3 consecutive detections to confirm track
+            max_cosine_distance=0.85,  # Increase distance threshold
             nn_budget=None,    # No limit on stored features
             bgr=True,
-            
-
+            polygon=False
             
         )
         # Tracking variables
@@ -300,9 +301,9 @@ class DroneTracker:
             
     def capture_frames(self):
         """Main camera capture loop running in separate thread"""
-        self.cap = cv2.VideoCapture(0)
-        # self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-        # self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+        self.cap = cv2.VideoCapture(2)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
         
         if not self.cap.isOpened():
             logger.error("Failed to open camera")

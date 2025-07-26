@@ -35,17 +35,17 @@ async def lifespan(app: FastAPI):
     Handles application startup and shutdown events.
     """
     # --- Startup ---
+    # Create database tables
+    SQLModel.metadata.create_all(engine)
+    logger.info("✅ Database tables created successfully.")
+
+
     global tracker, manager
     logger.info("🚀 Application starting up...")
     
     # Initialize WebSocket Manager
     manager = ConnectionManager()
     logger.info("WebSocket Manager initialized.")
-
-    print("Creating database tables...")
-    SQLModel.metadata.create_all(engine)
-    print("✅ Database tables created successfully")
-
 
     # Initialize Drone Tracker
     try:
@@ -98,7 +98,7 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Global tracker instance - Replace with your model path
-MODEL_PATH = 'best.pt'
+MODEL_PATH = 'bestl.pt'
 tracker: Optional[DroneTracker] = None
 
 # WebSocket connection manager
