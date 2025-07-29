@@ -20,6 +20,42 @@ utilizing YOLO, DeepSORT, React.js, and a FastAPI backend.
 - Camera/Webcam
 - YOLO model file (`best.pt`)
 
+## ⚡ Important Notes
+
+- **CUDA GPU Setup:**  
+  If you want to use CUDA GPU for acceleration, please run:
+
+  ```bash
+    # Activate your backend virtual environment first:
+    # On Windows:
+    venv\Scripts\activate
+    # On macOS/Linux:
+    source venv/bin/activate
+    
+    # Then run:
+    pip uninstall -y torch torchvision torchaudio
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+
+  ```
+
+  Or, get the appropriate version for your system from the official [PyTorch website](https://pytorch.org/).
+
+- **Changing Camera Feed Source:**  
+To change the camera/video feed source, edit **line 304** in `backend/tracker.py` and change the parameter in `cv2.VideoCapture(#source number)` accordingly.
+
+
+## Download Pre-trained Model & Dataset
+
+You can use the developer's custom-trained YOLOv8l model and the dataset:
+
+- **Custom YOLOv8l Model:**  
+  [Download yolov8l_ep10](https://www.kaggle.com/models/nitishbiswas1/yolov8l_ep10)
+
+- **Training Dataset:**  
+  [Drone Detection YOLO Dataset](https://www.kaggle.com/datasets/nitishbiswas1/drone-detection-yolo-dataset)
+
+---
+
 ## Quick Start
 
 ### 1. Clone and Setup Backend
@@ -227,6 +263,12 @@ For issues and questions:
 - Check the troubleshooting section
 - Review API documentation at `http://localhost:8000/docs`
 - Create an issue on GitHub
+
+**You can also contact the developer:**
+
+- **Name:** Nitish Biswas
+- **Email:** nitishbiswas066@gmail.com
+- **Number:** 8979053318
 
 ---
 
