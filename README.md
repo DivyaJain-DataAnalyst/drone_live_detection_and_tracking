@@ -268,7 +268,6 @@ For issues and questions:
 
 - **Name:** Nitish Biswas
 - **Email:** nitishbiswas066@gmail.com
-- **Number:** 8979053318
 
 ---
 
