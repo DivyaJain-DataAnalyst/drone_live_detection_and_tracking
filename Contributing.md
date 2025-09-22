@@ -30,7 +30,7 @@ This guide will walk you through the entire contribution process, from setting u
 
 ## 📜 Code of Conduct
 
-We expect all contributors to follow our [`C0ming Soon`].
+We expect all contributors to follow our [`Coming Soon`].
 
 By participating in this project, you agree to maintain a **respectful and inclusive environment** for everyone.
 
