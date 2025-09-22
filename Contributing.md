@@ -30,7 +30,7 @@ This guide will walk you through the entire contribution process, from setting u
 
 ## 📜 Code of Conduct
 
-We expect all contributors to follow our [`COming Soon`].
+We expect all contributors to follow our [`C0ming Soon`].
 
 By participating in this project, you agree to maintain a **respectful and inclusive environment** for everyone.
 
@@ -97,7 +97,7 @@ We aim to keep things smooth and transparent:
 ## How To Contribute
 
 - Drop a Star ⭐ in this repo
-- Take a look at the existing [Issues](https://github.com/Nitish-Biswas/drone_live_detection_and_tracking/issues). 
+- Take a look at the existing [**Issues**](https://github.com/Nitish-Biswas/drone_live_detection_and_tracking/issues). 
 - Fork the Repo & create a branch for any issue that you are working on and commit your work.
 - At first raise an issue in which you want to work
 - Then after assigning only then work on that issue & make a PR 
