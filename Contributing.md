@@ -82,12 +82,12 @@ We aim to keep things smooth and transparent:
 
 * Once your PR is submitted, a maintainer will review it.
 * You may be asked to:
- * Fix styling issues.
- * Add missing documentation/tests.
- * Break large PRs into smaller pieces.
+  * Fix styling issues.
+  * Add missing documentation/tests.
+  * Break large PRs into smaller pieces.
 * After approval:
- * Your PR will be merged with a squash merge to keep history clean.
- * You’ll receive feedback, even if the PR isn’t merged immediately.
+  * Your PR will be merged with a squash merge to keep history clean.
+  * You’ll receive feedback, even if the PR isn’t merged immediately.
 * ⌛ Reviews may take **24–72 hours** depending on activity. Thanks for your patience!
 
  > For Any Query, Send DM on LinkedIn [`Nitish Biswas`](https://www.linkedin.com/in/nitish-biswas1/).
